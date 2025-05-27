@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - ConsultaFácil</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/relatorios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ConsultaFácil</h1>
+            </div>
+            <nav class="nav">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="clientes.html">Área do Cliente</a></li>
+                    <li><a href="relatorios.html" class="active">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Painel de Relatórios</h2>
+                <p>Análise de desempenho e estatísticas de agendamentos</p>
+            </div>
+        </section>
+
+        <section class="reports-dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <div class="date-filter">
+                        <label for="report-period">Período:</label>
+                        <select id="report-period">
+                            <option value="week">Última Semana</option>
+                            <option value="month" selected>Último Mês</option>
+                            <option value="quarter">Último Trimestre</option>
+                            <option value="year">Último Ano</option>
+                        </select>
+                    </div>
+                    <div class="dashboard-actions">
+                        <button class="btn btn-outline">Exportar PDF</button>
+                        <button class="btn btn-outline">Exportar Excel</button>
+                    </div>
+                </div>
+
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon bookings"></div>
+                        <div class="stat-info">
+                            <h3>142</h3>
+                            <p>Agendamentos Totais</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon completed"></div>
+                        <div class="stat-info">
+                            <h3>128</h3>
+                            <p>Consultorias Realizadas</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <span>+8%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon canceled"></div>
+                        <div class="stat-info">
+                            <h3>14</h3>
+                            <p>Consultorias Canceladas</p>
+                        </div>
+                        <div class="stat-trend down">
+                            <span>-3%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon satisfaction"></div>
+                        <div class="stat-info">
+                            <h3>97%</h3>
+                            <p>Índice de Satisfação</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <span>+2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="chart-card">
+                        <h3>Agendamentos por Tipo de Serviço</h3>
+                        <div class="css-chart bar-chart">
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="--size: 75%;">
+                                    <div class="chart-bar-label">Financeira</div>
+                                    <span class="chart-value">75%</span>
+                                </div>
+                                <div class="chart-bar" style="--size: 60%;">
+                                    <div class="chart-bar-label">Projetos</div>
+                                    <span class="chart-value">60%</span>
+                                </div>
+                                <div class="chart-bar" style="--size: 45%;">
+                                    <div class="chart-bar-label">Marketing</div>
+                                    <span class="chart-value">45%</span>
+                                </div>
+                                <div class="chart-bar" style="--size: 35%;">
+                                    <div class="chart-bar-label">Inovação</div>
+                                    <span class="chart-value">35%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Dias Mais Procurados</h3>
+                        <div class="css-chart heat-chart">
+                            <div class="days-grid">
+                                <div class="day-column">
+                                    <div class="day-label">Seg</div>
+                                    <div class="heat-cell" style="--heat: 80%;"></div>
+                                </div>
+                                <div class="day-column">
+                                    <div class="day-label">Ter</div>
+                                    <div class="heat-cell" style="--heat: 95%;"></div>
+                                </div>
+                                <div class="day-column">
+                                    <div class="day-label">Qua</div>
+                                    <div class="heat-cell" style="--heat: 70%;"></div>
+                                </div>
+                                <div class="day-column">
+                                    <div class="day-label">Qui</div>
+                                    <div class="heat-cell" style="--heat: 85%;"></div>
+                                </div>
+                                <div class="day-column">
+                                    <div class="day-label">Sex</div>
+                                    <div class="heat-cell" style="--heat: 65%;"></div>
+                                </div>
+                                <div class="day-column">
+                                    <div class="day-label">Sáb</div>
+                                    <div class="heat-cell" style="--heat: 20%;"></div>
+                                </div>
+                            </div>
+                            <div class="heat-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="--color: rgba(26, 86, 219, 0.2);"></div>
+                                    <span>Baixo</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="--color: rgba(26, 86, 219, 0.5);"></div>
+                                    <span>Médio</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="--color: rgba(26, 86, 219, 0.9);"></div>
+                                    <span>Alto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card wide">
+                        <h3>Porcentagem de Ocupação Semanal</h3>
+                        <div class="css-chart occupation-chart">
+                            <div class="occupation-grid">
+                                <div class="time-labels">
+                                    <div class="time-label">09:00</div>
+                                    <div class="time-label">10:30</div>
+                                    <div class="time-label">13:00</div>
+                                    <div class="time-label">14:30</div>
+                                    <div class="time-label">16:00</div>
+                                </div>
+                                <div class="occupation-cells">
+                                    <div class="day-row">
+                                        <div class="day-label">Seg</div>
+                                        <div class="cell occupied financial"></div>
+                                        <div class="cell occupied projects"></div>
+                                        <div class="cell free"></div>
+                                        <div class="cell occupied marketing"></div>
+                                        <div class="cell occupied innovation"></div>
+                                    </div>
+                                    <div class="day-row">
+                                        <div class="day-label">Ter</div>
+                                        <div class="cell occupied financial"></div>
+                                        <div class="cell occupied financial"></div>
+                                        <div class="cell occupied projects"></div>
+                                        <div class="cell occupied projects"></div>
+                                        <div class="cell occupied marketing"></div>
+                                    </div>
+                                    <div class="day-row">
+                                        <div class="day-label">Qua</div>
+                                        <div class="cell occupied innovation"></div>
+                                        <div class="cell free"></div>
+                                        <div class="cell occupied marketing"></div>
+                                        <div class="cell occupied financial"></div>
+                                        <div class="cell free"></div>
+                                    </div>
+                                    <div class="day-row">
+                                        <div class="day-label">Qui</div>
+                                        <div class="cell occupied projects"></div>
+                                        <div class="cell occupied financial"></div>
+                                        <div class="cell occupied innovation"></div>
+                                        <div class="cell occupied financial"></div>
+                                        <div class="cell occupied projects"></div>
+                                    </div>
+                                    <div class="day-row">
+                                        <div class="day-label">Sex</div>
+                                        <div class="cell free"></div>
+                                        <div class="cell occupied marketing"></div>
+                                        <div class="cell occupied projects"></div>
+                                        <div class="cell free"></div>
+                                        <div class="cell occupied financial"></div>
+                                    </div>
+                                    <div class="day-row">
+                                        <div class="day-label">Sáb</div>
+                                        <div class="cell free"></div>
+                                        <div class="cell free"></div>
+                                        <div class="cell occupied innovation"></div>
+                                        <div class="cell free"></div>
+                                        <div class="cell free"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color financial"></div>
+                                    <span>Financeira</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color projects"></div>
+                                    <span>Projetos</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color marketing"></div>
+                                    <span>Marketing</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color innovation"></div>
+                                    <span>Inovação</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color free"></div>
+                                    <span>Disponível</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Distribuição por Consultores</h3>
+                        <div class="css-chart circle-chart">
+                            <div class="circle-container">
+                                <div class="circle-wrapper">
+                                    <div class="circle-progress" style="--percentage: 30%; --color: var(--primary-color);">
+                                        <div class="circle-label">30%</div>
+                                    </div>
+                                    <div class="progress-label">Ricardo M.</div>
+                                </div>
+                                <div class="circle-wrapper">
+                                    <div class="circle-progress" style="--percentage: 25%; --color: var(--secondary-color);">
+                                        <div class="circle-label">25%</div>
+                                    </div>
+                                    <div class="progress-label">Amanda S.</div>
+                                </div>
+                                <div class="circle-wrapper">
+                                    <div class="circle-progress" style="--percentage: 20%; --color: var(--accent-color);">
+                                        <div class="circle-label">20%</div>
+                                    </div>
+                                    <div class="progress-label">Patrícia L.</div>
+                                </div>
+                                <div class="circle-wrapper">
+                                    <div class="circle-progress" style="--percentage: 15%; --color: var(--success-color);">
+                                        <div class="circle-label">15%</div>
+                                    </div>
+                                    <div class="progress-label">Fernando C.</div>
+                                </div>
+                                <div class="circle-wrapper">
+                                    <div class="circle-progress" style="--percentage: 10%; --color: var(--warning-color);">
+                                        <div class="circle-label">10%</div>
+                                    </div>
+                                    <div class="progress-label">Outros</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reports-table-container">
+                    <h3>Tabela de Reservas Recentes</h3>
+                    <div class="table-wrapper">
+                        <table class="reports-table">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Empresa</th>
+                                    <th>Tipo de Serviço</th>
+                                    <th>Data</th>
+                                    <th>Horário</th>
+                                    <th>Consultor</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ana Oliveira</td>
+                                    <td>Tech Solutions</td>
+                                    <td>Consultoria Financeira</td>
+                                    <td>12/05/2025</td>
+                                    <td>10:30</td>
+                                    <td>Ricardo Mendes</td>
+                                    <td><span class="status completed">Realizada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Mendes</td>
+                                    <td>Rede Varejo Brasil</td>
+                                    <td>Marketing Estratégico</td>
+                                    <td>14/05/2025</td>
+                                    <td>14:00</td>
+                                    <td>Patrícia Lima</td>
+                                    <td><span class="status completed">Realizada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Mariana Costa</td>
+                                    <td>Construções Integradas</td>
+                                    <td>Consultoria Financeira</td>
+                                    <td>15/05/2025</td>
+                                    <td>09:00</td>
+                                    <td>Ricardo Mendes</td>
+                                    <td><span class="status completed">Realizada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Roberto Almeida</td>
+                                    <td>Alimentos Naturais S.A.</td>
+                                    <td>Marketing Estratégico</td>
+                                    <td>16/05/2025</td>
+                                    <td>16:00</td>
+                                    <td>Patrícia Lima</td>
+                                    <td><span class="status cancelled">Cancelada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernanda Lima</td>
+                                    <td>Consultoria Jurídica</td>
+                                    <td>Inovação Empresarial</td>
+                                    <td>18/05/2025</td>
+                                    <td>13:00</td>
+                                    <td>Fernando Costa</td>
+                                    <td><span class="status completed">Realizada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Lucas Santos</td>
+                                    <td>Tecnologia Digital</td>
+                                    <td>Inovação Empresarial</td>
+                                    <td>19/05/2025</td>
+                                    <td>10:30</td>
+                                    <td>Fernando Costa</td>
+                                    <td><span class="status completed">Realizada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Carla Oliveira</td>
+                                    <td>Moda Express</td>
+                                    <td>Gestão de Projetos</td>
+                                    <td>20/05/2025</td>
+                                    <td>14:30</td>
+                                    <td>Amanda Souza</td>
+                                    <td><span class="status completed">Realizada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Paulo Rodrigues</td>
+                                    <td>Logística Integrada</td>
+                                    <td>Gestão de Projetos</td>
+                                    <td>21/05/2025</td>
+                                    <td>09:00</td>
+                                    <td>Amanda Souza</td>
+                                    <td><span class="status pending">Agendada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Juliana Martins</td>
+                                    <td>Educação Digital</td>
+                                    <td>Consultoria Financeira</td>
+                                    <td>22/05/2025</td>
+                                    <td>13:00</td>
+                                    <td>Ricardo Mendes</td>
+                                    <td><span class="status pending">Agendada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Ricardo Ferreira</td>
+                                    <td>Saúde Preventiva</td>
+                                    <td>Marketing Estratégico</td>
+                                    <td>23/05/2025</td>
+                                    <td>16:00</td>
+                                    <td>Patrícia Lima</td>
+                                    <td><span class="status pending">Agendada</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ConsultaFácil</h2>
+                    <p>Consultoria empresarial de excelência</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Links Rápidos</h3>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="clientes.html">Área do Cliente</a></li>
+                            <li><a href="relatorios.html">Relatórios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Serviços</h3>
+                        <ul>
+                            <li><a href="#">Consultoria Financeira</a></li>
+                            <li><a href="#">Gestão de Projetos</a></li>
+                            <li><a href="#">Marketing Estratégico</a></li>
+                            <li><a href="#">Inovação Empresarial</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contato</h3>
+                        <ul>
+                            <li>contato@consultafacil.com.br</li>
+                            <li>(11) 3456-7890</li>
+                            <li>Av. Paulista, 1000 - São Paulo/SP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ConsultaFácil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
